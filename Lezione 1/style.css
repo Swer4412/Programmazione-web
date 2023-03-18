@@ -1,0 +1,13 @@
+main {
+    color: #ff0000;
+}
+
+#paragraph {
+    color:blue;
+    margin: 5px;
+}
+
+.title {
+    background-color: #28e638;
+    padding: 15px;
+}

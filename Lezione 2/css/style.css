@@ -1,0 +1,86 @@
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+body {
+    margin:0;
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    padding: 15px;
+    background:rgb(255, 226, 177)
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    align-items: center;
+}
+
+.navbar a {
+    display: flex;
+    flex-direction: row;
+    color: black;
+    text-decoration: none;
+    align-items:center
+}
+
+#title {
+    font-size: 26px;
+    margin-left: 20px;
+}
+
+.logo {
+    width: 64px;
+    height: 64px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+    padding: 0px;
+    gap: 15px;
+
+    /* toglie i pallini*/
+    list-style: none;
+}
+
+.menu li a {
+    color: black;
+    /* togli la linea blu */
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: white;
+}
+
+footer {
+    height: 200px;
+    background-color: rgb(255, 199, 120);
+    margin-top: auto;
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.footer-desc div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 16rem;
+}
