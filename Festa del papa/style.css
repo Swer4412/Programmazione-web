@@ -1,13 +1,10 @@
-/* Stili per il body */
 body {
 	margin: 0;
 	padding: 0;
-	font-family: Arial, sans-serif;
 	background-color: #f9f9f9;
 	color: #333;
 }
 
-/* Stili per l'header */
 header {
 	background-color: #333;
 	color: #fff;
@@ -15,16 +12,14 @@ header {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
-/* Stili per il logo */
 header h1 {
 	margin: 0;
 	font-size: 32px;
 }
 
-/* Stili per la barra di navigazione */
 nav ul {
 	list-style: none;
 	margin: 0;
@@ -43,14 +38,12 @@ nav ul li a {
 	font-size: 20px;
 }
 
-/* Stili per il contenuto principale */
 main {
 	max-width: 800px;
 	margin: 0 auto;
 	padding: 20px;
 }
 
-/* Stili per le sezioni */
 section {
 	margin-bottom: 40px;
 }
@@ -60,24 +53,17 @@ section h2 {
 	margin-bottom: 10px;
 }
 
-/* Stili per i blockquote */
-blockquote {
+div {
 	background-color: #f3f3f3;
 	padding: 10px;
 	margin: 0;
 }
 
-blockquote p {
+div p {
 	font-style: italic;
 	margin: 0;
 }
 
-blockquote footer {
-	font-weight: bold;
-	margin-top: 10px;
-}
-
-/* Stili per il footer */
 footer {
 	background-color: #333;
 	color: #fff;
