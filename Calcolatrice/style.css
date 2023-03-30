@@ -1,0 +1,48 @@
+.calculator {
+    display:flex;
+    flex-direction: column;
+    border-style:double;
+    padding:auto;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: auto;
+    border-style:solid;
+}
+
+.btn {
+    font-size: 2rem;
+    width: 20%;
+    padding: 3rem;
+    background-color:rgb(253, 178, 178);
+}
+
+#equals {
+    background-color:rgb(250, 82, 82);
+}
+
+.btn:hover {
+    background-color:rgb(255, 161, 161);
+}
+
+.btn:active {
+    background-color:rgb(252, 133, 133);
+}
+
+.row {
+    display:flex;
+    flex-direction: row;
+}
+
+#inputBar {
+    display: flex;
+    justify-content: center;
+    padding:3rem;
+}
+
+
