@@ -12,37 +12,37 @@
         
         <div id="inputBar">
             <input id="input" disabled/>
-            <button id="cancella">Cancella</button>
+            <button id="cancella" onclick="delInput()">Cancella</button>
         </div>
 
         <div class="buttons">
 
             <div class="row">
-                <button class="btn">7</button>
-                <button class="btn">8</button>
-                <button class="btn">9</button>
-                <button class="btn">+</button>
+                <button class="btn" onclick="validaInput('7')">7</button>
+                <button class="btn" onclick="validaInput('8')">8</button>
+                <button class="btn" onclick="validaInput('9')">9</button>
+                <button class="btn" onclick="validaInput('+')">+</button>
             </div>
 
             <div class="row">
-                <button class="btn">4</button>
-                <button class="btn">5</button>
-                <button class="btn">6</button>
-                <button class="btn">-</button>
+                <button class="btn" onclick="validaInput('4')">4</button>
+                <button class="btn" onclick="validaInput('5')">5</button>
+                <button class="btn" onclick="validaInput('6')">6</button>
+                <button class="btn" onclick="validaInput('-')">-</button>
             </div>
 
             <div class="row">
-                <button class="btn">1</button>
-                <button class="btn">2</button>
-                <button class="btn">3</button>
-                <button class="btn">X</button>
+                <button class="btn" onclick="validaInput('1')">1</button>
+                <button class="btn" onclick="validaInput('2')">2</button>
+                <button class="btn" onclick="validaInput('3')">3</button>
+                <button class="btn" onclick="validaInput('*')">X</button>
             </div>
 
             <div class="row">
-                <button class="btn">.</button>
-                <button class="btn">0</button>
-                <button class="btn" id="equals">=</button>
-                <button class="btn">÷</button>
+                <button class="btn" onclick="validaInput('.')">.</button>
+                <button class="btn" onclick="validaInput('0')">0</button>
+                <button class="btn" onclick="validaInput('Enter')" id="equals">=</button>
+                <button class="btn" onclick="validaInput('/')">÷</button>
             </div>
 
         </div>
