@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+body {
+  margin:0;
+  display:flex;
   flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  padding: 15px;
+  background:rgb(255, 226, 177)
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; 
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.navbar a {
+  display: flex;
+  flex-direction: row;
+  color: black;
+  text-decoration: none;
+  align-items:center
+}
+
+#title {
+  font-size: 26px;
+  margin-left: 20px;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  align-items: center;
+  padding: 0px;
+  gap: 15px;
+
+  /* toglie i pallini*/
+  list-style: none;
+}
+
+.menu li a {
+  color: black;
+  /* togli la linea blu */
+  text-decoration: none;
+}
+
+.menu li a:hover {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+footer {
+  height: 200px;
+  background-color: rgb(255, 199, 120);
+  margin-top: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Telefoni */
+@media screen and (max-width: 600px) {
+  .footer-menu {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .menu {
+    display: none;
   }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/*  */
+@media screen and (min-width: 601px) {
+  .footer-menu {
+    flex-direction: row;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main > h1 {
+    text-align: center;
+  }
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-name {
+  display: flex;
+}
+
+.toggleMenu {
+  height: 300px;
+}
+
+.mobileMenuClass {
+  display: none;
+}
+
+.mobileMenuOpen {
+  display: block;
 }
