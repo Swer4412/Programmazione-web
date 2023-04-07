@@ -1,12 +1,20 @@
 
 
-//I componenti devono avere la lettera iniziale maiuscola
+//I componenti devono avere la lettera iniziale MAIUSCOLA
 function Header() {
+    const openMenu = () => {
+        var header = document.getElementById("header")
+        header.classList.toggle("toggleMenu") //.toggle fa in modo che se una classe è attivata, viene disattivata e viceversa
+    
+        var mobileMenu = document.getElementById("mobileMenu")
+        mobileMenu.classList.toggle("MobileMenuClass")
+    }    
+
     return (
         <header id="header">
             <nav className="navbar">
                 <a href="index.html">
-                    <img src="img/logo.png" alt="Logo" class="logo" />
+                    <img src="logo.png" alt="Logo" class="logo" />
                     <p id="title">CAROLOS BURRITOS Y TACOS</p>
                 </a>
 
@@ -15,7 +23,7 @@ function Header() {
                     <li><a href="contact-us.html">contact us</a></li>
                 </ul>
 
-                <button className="hamburger" onclick="openMenu()">
+                <button className="hamburger" onClick={openMenu}>
                     <svg viewBox="0 0 100 80" width="40" height="40">
                         <rect width="100" height="20"></rect>
                         <rect y="30" width="100" height="20"></rect>
@@ -28,6 +36,7 @@ function Header() {
                 <li><a href="about-us.html">About us</a></li>
                 <li><a href="contact-us.html">contact us</a></li>
             </ul>
+            <script src="script.js"></script>
         </header>
     );
 }
