@@ -4,6 +4,7 @@
 function Header() {
     const openMenu = () => {
         var header = document.getElementById("header")
+        console.log(header) //Header viene trovato: <header id="header">...</header>
         header.classList.toggle("toggleMenu") //.toggle fa in modo che se una classe è attivata, viene disattivata e viceversa
     
         var mobileMenu = document.getElementById("mobileMenu")
@@ -14,7 +15,7 @@ function Header() {
         <header id="header">
             <nav className="navbar">
                 <a href="index.html">
-                    <img src="logo.png" alt="Logo" class="logo" />
+                    <img src="logo.png" alt="Logo" className="logo" />
                     <p id="title">CAROLOS BURRITOS Y TACOS</p>
                 </a>
 
