@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-var globalId = 0;
 
 export default function App() {
   //Creo useState per l'input e la lista degli input
+  const [globalId, setGlobalId] = useState(0);
   const [task, setTask] = useState("");
   const [todos, setTodos] = useState([]);
 
@@ -12,9 +12,9 @@ export default function App() {
     event.preventDefault(); //PreventDefault è un metodo della interfaccia Event che non so come ma
     setTodos((oldTodos) => {
       setTask("");
-      return [...oldTodos, { todo: task, id: globalId++, checked: false }];
+      return [...oldTodos, { todo: task, id: globalId, checked: false }];
     });
-    globalId--; //Non so perchè ma globalId++ è come se venisse esguito più volte, quindi lo diminuisco
+    setGlobalId((id) => id+1); //Dato che sono const, non posso scrivere id++, ma id+1 viene interpretato da react, non so come
   }
 
   function deleteItem(itemId) {
@@ -31,7 +31,8 @@ export default function App() {
             checked: true, //una volta che ci sono i campi, checked viene cambiato di valore
           };
         } else {
-          return item;
+            //Altrimenti ritorno l'item così com'è
+            return item;
         }
       })
     );
