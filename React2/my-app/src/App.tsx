@@ -1,9 +1,9 @@
 import React, {useState, createContext}  from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Header from './Header';
 
-//definisco _theme come stringa (valore iniziale light) e toggle come funzione(scritta così è uguale a function())
+//Questa riga serve per definire la struttura di value, così diciamo che value contiene una variabile _theme:stringa, toggle:funzione
+//Dobbiamo quindi mettere dentro value questa struttura
 export const ThemeContext = createContext({_theme: "light", toggle: ()=>{}})
 
 function App() {
@@ -17,7 +17,9 @@ function App() {
 
   return (
     //_theme = allo useState, toggle = funzione che modifica qullo state
+    //Dentro il valore value posso mettere dentro anche un oggetto, per poi prendere un elemento di questo oggetto basta utilizzare il destructuring
     <ThemeContext.Provider value={{_theme:theme, toggle: toggleTheme}}>
+    {/*Dentro i tag di ThemeContext.Provider bisonga mettere tutti i componenti che necessitano di value*/}
     <div className="App">
       <Header/>
     </div>
