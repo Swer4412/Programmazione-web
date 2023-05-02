@@ -1,61 +1,21 @@
-import { ChangeEvent, createContext, useEffect, useState } from 'react'
-import './App.css'
-import axios from 'axios';
-import PokemonInfo from './PokemonInfo';
+import "./App.css"
+import { Route, Routes } from "react-router-dom"
+import Layout from "./components/Layout"
+import Home from "./Pages/Home"
+import About from "./Pages/About"
 
-export const PokemonContext = createContext({response: undefined});
 
 function App() {
-  
-  const [currentPokemon, setCurrentPokemon] = useState("");
-  const [responseData, setResponseData] = useState()
-  
-  const handlePokemon = (event: ChangeEvent<HTMLInputElement>) => {
-
-    setCurrentPokemon(event.target.value)
-
-  }
-
-   useEffect(() => {
-    if (currentPokemon !== "") {
-     axios.get('https://pokeapi.co/api/v2/pokemon/' + currentPokemon)
-      .then((response: any)=> {
-        setResponseData(response)
-        
-
-      }).catch((error)=> {
-        console.log(error)
-
-      })
-    }
-   }, [currentPokemon]
-   )
-
-  return (
-    <PokemonContext.Provider value={{response:responseData}}>
-    <h1 className='title'>Pokedex</h1>
-    <p className="paragraph">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-      Eum quis consequatur architecto tenetur, magni sit numquam assumenda 
-      dolorum. Velit tempore, ea aliquid omnis accusamus quod natus sapiente sint fugit ad.
-    </p>
-    {/*Add pokemon and search */}
-      <div className='searchBox'>
-        <button>
-          +
-        </button>
-        <input type="text" name="searchPokemon" onChange={handlePokemon}/>
-      </div>
-      <div>
-    {/*Pokemon info */}
-      <PokemonInfo/>
-      </div>
-    </PokemonContext.Provider>
-  )
+    return (
+        <>
+        <Routes>
+            <Route path="/" element={<Layout/>}>
+                <Route index element={<Home/>}/>
+                <Route path="/about" element={<About/>}/>
+            </Route>
+        </Routes>
+        </>
+    )
 }
 
 export default App
-function crateContext() {
-  throw new Error('Function not implemented.');
-}
-
