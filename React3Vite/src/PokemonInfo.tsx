@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { PokemonContext } from './App';
 
-
 const PokemonInfo = () => {
 
     const {response} = useContext(PokemonContext)
@@ -10,8 +9,8 @@ const PokemonInfo = () => {
 
     return (
         <div>
-            <img src={response && response.data ? response.data.sprites.front_default : ""} alt="" />
-            {response && response.data ? response.data.name: ""}
+            <img src={response === undefined ? "" : response.data.sprites.front_default} alt="" />
+            {response === undefined ? "" : response.data.name}
         </div>
     );
 };

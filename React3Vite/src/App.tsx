@@ -3,12 +3,12 @@ import './App.css'
 import axios from 'axios';
 import PokemonInfo from './PokemonInfo';
 
-export const PokemonContext = createContext({response: {}});
+export const PokemonContext = createContext({response: undefined});
 
 function App() {
   
   const [currentPokemon, setCurrentPokemon] = useState("");
-  const [responseData, setResponseData] = useState({})
+  const [responseData, setResponseData] = useState()
   
   const handlePokemon = (event: ChangeEvent<HTMLInputElement>) => {
 
@@ -19,7 +19,7 @@ function App() {
    useEffect(() => {
     if (currentPokemon !== "") {
      axios.get('https://pokeapi.co/api/v2/pokemon/' + currentPokemon)
-      .then((response)=> {
+      .then((response: any)=> {
         setResponseData(response)
         
 
