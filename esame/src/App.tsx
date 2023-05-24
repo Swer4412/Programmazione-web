@@ -6,7 +6,9 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
-      <Route path="/" element={<h1>Ciao</h1>} />
+      <Route path="/" element={<Layout/>} />
+        <Route index element={<Home/>}/>
+        <Route path="/saved" element={<SavedNews/>} />
     </Route>
   )
 )
