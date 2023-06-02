@@ -1,10 +1,16 @@
 import React from 'react';
+import { Outlet, NavLink } from 'react-router-dom';
 
 const SideBar = () => {
     return (
-        <div>
-            
-        </div>
+        <>
+            <nav>
+                <NavLink to="/" />
+            </nav>
+            <main>
+                <Outlet />
+            </main>
+        </>
     );
 };
 
