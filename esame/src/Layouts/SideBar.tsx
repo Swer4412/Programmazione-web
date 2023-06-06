@@ -1,12 +1,12 @@
-import React, {FC} from 'react';
+import React, { FC } from 'react';
 import { Outlet, NavLink, Link } from 'react-router-dom';
 import { BiHome, BiSave } from "react-icons/bi"
 
 const SideBar: FC = () => {
     return (
         <>
-            <div className="flex h-screen bg-gray-100">
-                <div className="w-64 bg-white shadow-lg flex flex-col">
+            <div className="flex bg-gray-100">
+                <div className="w-64 bg-white shadow-lg flex flex-col sticky top-0 h-screen">
                     <div className="p-4 flex items-center justify-center border-b">
                         <h1 className="text-2xl font-bold text-gray-800"><Link to="/">MyNews</Link></h1>
                     </div>
